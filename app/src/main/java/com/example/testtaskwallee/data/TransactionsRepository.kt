@@ -1,7 +1,7 @@
 package com.example.testtaskwallee.data
 
 import com.example.testtaskwallee.data.dto.TransactionDto
-import com.example.testtaskwallee.domain.ITransactionsRepository
+import com.example.testtaskwallee.domain.repository.ITransactionsRepository
 import javax.inject.Inject
 
 class TransactionsRepository @Inject constructor(

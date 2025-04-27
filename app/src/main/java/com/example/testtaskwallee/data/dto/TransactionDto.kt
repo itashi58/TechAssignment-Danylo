@@ -1,21 +1,21 @@
 package com.example.testtaskwallee.data.dto
 
 data class TransactionDto(
-    val transactionId: String,
+    val transactionId: String, // Double or string
     val status: String,
-    val amount: Amount,
-    val transactionDetails: TransactionDetailsDto
+    val amountTotals: AmountTotals,
+    val transactionDetails: TransactionDetails
 )
 
-data class Amount(
-    val purchaseAmount: String,
+data class AmountTotals(
+    val purchaseAmount: Double,
     val currency: String,
-    val taxableAmount: String,
-    val taxRate: String,
-    val tipAmount: String,
-    val discountAmount: String
+    val taxableAmount: Double,
+    val taxRate: Double,
+    val tipAmount: Double,
+    val discountAmount: Double
 )
 
-data class TransactionDetailsDto(
+data class TransactionDetails(
     val timestamp: String
 )

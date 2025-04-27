@@ -1,4 +1,4 @@
-package com.example.testtaskwallee.domain
+package com.example.testtaskwallee.domain.repository
 
 import com.example.testtaskwallee.data.dto.TransactionDto
 
