@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#D1D5DB</color>
+    <color name="red">#F44336</color>
+
+    <color name="pin_pad_background">#F6F6F6</color>
+    <color name="pin_pad_button_background">#0DA69C</color>
+    <color name="pin_pad_number">#666666</color>
+
 </resources>

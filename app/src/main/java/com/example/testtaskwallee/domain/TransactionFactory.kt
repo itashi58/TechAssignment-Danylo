@@ -19,8 +19,8 @@ class TransactionFactory @Inject constructor() {
         return Transaction(
             id = transactionDto.transactionId,
             status = transactionDto.status,
-            amount = "${calculateAmount(transactionDto.amountTotals)} ${transactionDto.amountTotals.currency}",
-            tax = "${calculateTax(transactionDto.amountTotals)} ${transactionDto.amountTotals.currency}",
+            amount = "${calculateAmount(transactionDto.amount)} ${transactionDto.amount.currency}",
+            tax = "${calculateTax(transactionDto.amount)} ${transactionDto.amount.currency}",
             date = formatTimestamp(transactionDto.transactionDetails.timestamp)
         )
     }

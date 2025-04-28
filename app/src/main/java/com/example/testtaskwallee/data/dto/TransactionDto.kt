@@ -3,7 +3,7 @@ package com.example.testtaskwallee.data.dto
 data class TransactionDto(
     val transactionId: String, // Double or string
     val status: String,
-    val amountTotals: AmountTotals,
+    val amount: AmountTotals,
     val transactionDetails: TransactionDetails
 )
 

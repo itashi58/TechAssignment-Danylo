@@ -4,6 +4,6 @@ import com.example.testtaskwallee.data.dto.TransactionDto
 import retrofit2.http.GET
 
 interface TransactionsApiService {
-    @GET()
+    @GET(".")
     suspend fun createTransaction(): TransactionDto
 }

@@ -1,6 +1,10 @@
-package com.example.testtaskwallee
+package com.example.testtaskwallee.common.di
 
 import com.example.testtaskwallee.data.TransactionsApiService
+import com.example.testtaskwallee.data.TransactionsRepository
+import com.example.testtaskwallee.domain.TransactionFactory
+import com.example.testtaskwallee.domain.use_case.CreateTransactionUseCase
+import com.example.testtaskwallee.presentation.use_cases.ICreateTransactionUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,4 +30,13 @@ object AppModule {
     @Singleton
     fun provideTransactionsApiService(retrofit: Retrofit): TransactionsApiService =
         retrofit.create(TransactionsApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideCreateTransactionUseCase(
+        transactionsRepository: TransactionsRepository,
+        transactionFactory: TransactionFactory
+    ): ICreateTransactionUseCase {
+        return CreateTransactionUseCase(transactionsRepository, transactionFactory)
+    }
 }

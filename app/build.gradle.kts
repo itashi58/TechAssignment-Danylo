@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.devtools.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -71,8 +72,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-}
-
-ksp {
-    arg("dagger.hilt.disableModulesHaveInstallInCheck", "true")
 }
